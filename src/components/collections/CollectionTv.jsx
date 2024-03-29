@@ -3,7 +3,9 @@ import { getCastingTv } from "../../Redux-system/CastingTvSlice";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getDetailsTv } from "../../Redux-system/DetailsTvSlice";
-import { Spinner } from "@material-tailwind/react";
+import { Button, Spinner } from "@material-tailwind/react";
+import { MdOutlineKeyboardBackspace } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const CollectionMo = () => {
   const { idTv } = useParams();
@@ -17,8 +19,7 @@ const CollectionMo = () => {
     dispatch(getDetailsTv(idTv));
     dispatch(getCastingTv(idTv));
   }, []);
-  console.log(detailsTv);
-  console.log(topCrew);
+
   return (
     <div>
       <div
@@ -116,6 +117,12 @@ const CollectionMo = () => {
           </div>
         ))}
       </div>
+      <Button variant="outlined" color="cyan" className="ms-12 text-white">
+        <Link className="flex" to={`/movies/${idTv}`}>
+          <MdOutlineKeyboardBackspace />
+          back step
+        </Link>
+      </Button>
     </div>
   );
 };

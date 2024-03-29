@@ -5,8 +5,8 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Movies from "./components/movies/Movies";
 import Series from "./components/series/Series";
-import Deatails from "./components/details/Deatails";
-import DetailsTv from "./components/DetailsTv/DetailsTv";
+import DeatailsMo from "./components/details/DeatailsMo";
+import DetailsTv from "./components/details/DetailsTv";
 import { SignIn } from "./components/sign/SignIn";
 import Error from "./components/error/ErrorPage";
 import ReviewsTv from "./components/reviews/ReviewsTv";
@@ -21,7 +21,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movies" element={<Movies />} />
-        <Route path="/movies/:idMovies" element={<Deatails />} />
+        <Route path="/movies/:idMovies" element={<DeatailsMo />} />
         <Route path="/movies/:idMovies/reviewsMovies" element={<ReviewsMo />} />
         <Route path="/movies/:idMovies/collection" element={<CollectionMo />} />
         <Route path="/series" element={<Series />} />

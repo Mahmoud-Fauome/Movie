@@ -22,7 +22,6 @@ const Series = () => {
   useEffect(() => {
     dispatch(getSeries());
   }, []);
-  console.log(series);
   return (
     <div>
       <div className="mt-20 flex flex-wrap justify-center">

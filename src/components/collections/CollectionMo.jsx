@@ -3,7 +3,9 @@ import { getCastingMove } from "../../Redux-system/CastingMoSlice";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getDetailsMov } from "../../Redux-system/DetailsMoSlice";
-import { Spinner } from "@material-tailwind/react";
+import { Button, Spinner } from "@material-tailwind/react";
+import { MdOutlineKeyboardBackspace } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const CollectionMo = () => {
   const { idMovies } = useParams();
@@ -17,8 +19,7 @@ const CollectionMo = () => {
     dispatch(getDetailsMov(idMovies));
     dispatch(getCastingMove(idMovies));
   }, []);
-  console.log(detailsMovies);
-  console.log(topCrew);
+
   return (
     <div>
       {detailsMovies.belongs_to_collection && (
@@ -120,6 +121,12 @@ const CollectionMo = () => {
           </div>
         ))}
       </div>
+      <Button variant="outlined" color="cyan" className="ms-12 text-white">
+        <Link className="flex" to={`/movies/${idMovies}`}>
+          <MdOutlineKeyboardBackspace />
+          back step
+        </Link>
+      </Button>
     </div>
   );
 };

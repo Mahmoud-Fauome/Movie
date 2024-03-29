@@ -47,7 +47,6 @@ const DetailsTv = () => {
     dispatch(getReviewsTv(idTv));
     dispatch(getRecomendTv(idTv));
   }, []);
-  console.log(recomendTv);
   return (
     <div className="text-white backdrop-contrast-150">
       {detailsTv && (

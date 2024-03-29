@@ -1,3 +1,4 @@
+import "./details.css";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getDetailsMov } from "../../Redux-system/DetailsMoSlice";
@@ -15,14 +16,13 @@ import {
 import { Button } from "@material-tailwind/react";
 import Tabb from "../tab/TabsMo";
 import { Link } from "react-router-dom";
-import "./details.css";
 import { getReviewsMo } from "../../Redux-system/ReviewsMoSlice";
 import Video from "../video/videoMo";
 import { getKeywordsMo } from "../../Redux-system/KeywordsMoSlice";
 import { getMovieTrailer } from "../../Redux-system/MoviesTraillerSlice";
 import ShowMoreText from "react-show-more-text";
 import { getRecomendMo } from "../../Redux-system/RecommendMo";
-const Deatails = () => {
+const DeatailsMo = () => {
   const { idMovies } = useParams();
   const { detailsMovies, detailsMoviesLoad } = useSelector(
     (state) => state.detailsMoSlice
@@ -323,4 +323,4 @@ const Deatails = () => {
     </div>
   );
 };
-export default Deatails;
+export default DeatailsMo;

@@ -37,7 +37,6 @@ const Home = () => {
     dispatch(getSeries());
   }, []);
 
-  // console.log(movies.reverse());
   return (
     <div>
       <h1 className="text-center text-cyan-400 mt-7 text-3xl ">Home</h1>
